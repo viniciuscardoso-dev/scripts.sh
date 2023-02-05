@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# testa se já existe este arquivo passado como argumento
+[[ -f $1 ]] && echo "já existe esse arquivo, saindo" && exit 1
+
+# testa se o numero de argumentos é igual a um
+[[ $# -ne 1 ]] && echo "o número de argumentos precisa ser um, saindo" && exit 1
+
+echo "#!/usr/bin/env bash" > $1
+
+chmod +x $1
+
+nano $1
+
+exit 0
