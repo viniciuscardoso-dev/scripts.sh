@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+string=$1
+
+
+echo $string
+git add .
+git commit -m "$string"
+
+git push
